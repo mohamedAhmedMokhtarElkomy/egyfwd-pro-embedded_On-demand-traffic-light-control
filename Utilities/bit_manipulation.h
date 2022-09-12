@@ -12,6 +12,7 @@
 
 #define CLEAR_BIT(reg, pinNumber) reg &= (1<<pinNumber)
 #define SET_BIT(reg, pinNumber) reg |= (1<<pinNumber)
+#define READ_BIT(reg, pinNumber) return (reg & (1<<pinNumber))>>pinNumber
 
 
 #endif /* BIT_MANIPULATION_H_ */
