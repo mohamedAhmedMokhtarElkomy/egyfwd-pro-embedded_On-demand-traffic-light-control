@@ -10,7 +10,8 @@
 #define BIT_MANIPULATION_H_
 
 
-
+#define CLEAR_BIT(reg, pinNumber) reg &= (1<<pinNumber)
+#define SET_BIT(reg, pinNumber) reg |= (1<<pinNumber)
 
 
 #endif /* BIT_MANIPULATION_H_ */
