@@ -12,8 +12,8 @@
 #include "../../MCAL/DIO/dio.h"	//Upper layer include lower layer
 
 
-#define PEDESTRIAN_BUTTON_PORT PORT_C
-#define PEDESTRIAN_BUTTON_PIN 0
+#define BUTTON_PEDESTRIAN_PORT PORT_C
+#define BUTTON_PEDESTRIAN_PIN 0
 
 typedef enum EN_BUTTON_STATUS
 {

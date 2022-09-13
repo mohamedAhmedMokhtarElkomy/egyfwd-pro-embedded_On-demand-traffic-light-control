@@ -12,14 +12,27 @@ int main(void)
 {
 	//APP_init();
 	
-	status = LED_init(PORT_A, 0);
-	status = LED_on(PORT_A, 0);
-	status = LED_off(PORT_A, 0);
+	status = LED_init(LEDS_PORT, LED_TRAFFIC_RED_PIN);
+	status = LED_init(LEDS_PORT, LED_TRAFFIC_YELLOW_PIN);
+	status = LED_init(LEDS_PORT, LED_TRAFFIC_GREEN_PIN);
 	
+	status = LED_on(LEDS_PORT, LED_TRAFFIC_RED_PIN);
+	status = LED_on(LEDS_PORT, LED_TRAFFIC_YELLOW_PIN);
 	
-	//while (1) 
-    //{
+	status = BUTTON_init(BUTTON_PEDESTRIAN_PORT, BUTTON_PEDESTRIAN_PIN);
+	
+	uint8_t buttonValue = 0;
+	
+	while (1) 
+    {
 		//APP_start();
-    //}
+		
+		status = BUTTON_read(PORT_C, 0, &buttonValue);
+		if(buttonValue == HIGH)
+			status = LED_on(LEDS_PORT, LED_TRAFFIC_GREEN_PIN);
+		else 
+			status - LED_off(LEDS_PORT, LED_TRAFFIC_GREEN_PIN);
+
+    }
 }
 

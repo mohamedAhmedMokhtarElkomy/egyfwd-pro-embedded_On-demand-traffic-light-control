@@ -6,6 +6,7 @@
  */ 
 
 #include "../ECUAL/LED driver/LED.h"
+#include "../ECUAL/BUTTON driver/button.h"
 
 #ifndef APPLICATION_H_
 #define APPLICATION_H_

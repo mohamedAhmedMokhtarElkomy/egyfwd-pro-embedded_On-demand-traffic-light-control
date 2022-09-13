@@ -122,6 +122,7 @@ EN_DIO_STATUS DIO_read(uint8_t pinNumber, uint8_t portNumber, uint8_t *value)
 		break;
 		case PORT_C:
 			*value = READ_BIT(PINC, pinNumber);
+		break;
 		case PORT_D:
 			*value = READ_BIT(PIND, pinNumber);
 		break;
