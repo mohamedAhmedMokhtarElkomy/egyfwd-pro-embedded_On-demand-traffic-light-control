@@ -3,53 +3,57 @@ On-demand-traffic-light-control.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         00000072  00000000  00000000  00000054  2**1
+  0 .text         00000224  00000000  00000000  00000074  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         00000000  00800060  00800060  000000c6  2**0
+  1 .data         00000000  00800060  00800060  00000298  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .comment      00000030  00000000  00000000  000000c6  2**0
+  2 .bss          00000001  00800060  00800060  00000298  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000298  2**0
                   CONTENTS, READONLY
-  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000000f8  2**2
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000002c8  2**2
                   CONTENTS, READONLY
-  4 .debug_aranges 00000020  00000000  00000000  00000134  2**0
+  5 .debug_aranges 00000090  00000000  00000000  00000304  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   00000563  00000000  00000000  00000154  2**0
+  6 .debug_info   00000b83  00000000  00000000  00000394  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 000004ec  00000000  00000000  000006b7  2**0
+  7 .debug_abbrev 000006cd  00000000  00000000  00000f17  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   0000014f  00000000  00000000  00000ba3  2**0
+  8 .debug_line   000004ff  00000000  00000000  000015e4  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  00000024  00000000  00000000  00000cf4  2**2
+  9 .debug_frame  000000cc  00000000  00000000  00001ae4  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    000002df  00000000  00000000  00000d18  2**0
+ 10 .debug_str    0000051c  00000000  00000000  00001bb0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_ranges 00000010  00000000  00000000  00000ff7  2**0
+ 11 .debug_loc    000006ed  00000000  00000000  000020cc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000060  00000000  00000000  000027b9  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
 
 00000000 <__vectors>:
    0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
-   4:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-   8:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-   c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  10:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  14:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  18:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  1c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  20:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  24:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  28:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  2c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  30:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  34:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  38:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  3c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  40:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  44:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  48:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  4c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  50:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+   4:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+   8:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+   c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  10:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  14:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  18:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  1c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  20:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  24:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  28:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  2c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  30:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  34:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  38:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  3c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  40:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  44:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  48:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  4c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  50:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
 
 00000054 <__ctors_end>:
   54:	11 24       	eor	r1, r1
@@ -58,23 +62,441 @@ Disassembly of section .text:
   5a:	d8 e0       	ldi	r29, 0x08	; 8
   5c:	de bf       	out	0x3e, r29	; 62
   5e:	cd bf       	out	0x3d, r28	; 61
-  60:	0e 94 36 00 	call	0x6c	; 0x6c <main>
-  64:	0c 94 37 00 	jmp	0x6e	; 0x6e <_exit>
 
-00000068 <__bad_interrupt>:
-  68:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+00000060 <__do_clear_bss>:
+  60:	20 e0       	ldi	r18, 0x00	; 0
+  62:	a0 e6       	ldi	r26, 0x60	; 96
+  64:	b0 e0       	ldi	r27, 0x00	; 0
+  66:	01 c0       	rjmp	.+2      	; 0x6a <.do_clear_bss_start>
 
-0000006c <main>:
+00000068 <.do_clear_bss_loop>:
+  68:	1d 92       	st	X+, r1
 
-#include <avr/io.h>
+0000006a <.do_clear_bss_start>:
+  6a:	a1 36       	cpi	r26, 0x61	; 97
+  6c:	b2 07       	cpc	r27, r18
+  6e:	e1 f7       	brne	.-8      	; 0x68 <.do_clear_bss_loop>
+  70:	0e 94 5d 00 	call	0xba	; 0xba <main>
+  74:	0c 94 10 01 	jmp	0x220	; 0x220 <_exit>
 
+00000078 <__bad_interrupt>:
+  78:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
 
+0000007c <LED_init>:
+ */ 
+
+#include "led.h"
+
+EN_LED_STATUS LED_init(uint8_t ledPort, uint8_t ledPin)
+{
+  7c:	98 2f       	mov	r25, r24
+  7e:	86 2f       	mov	r24, r22
+	if(DIO_init(ledPin, ledPort, OUTPUT) == DIO_INIT_OK)
+  80:	41 e0       	ldi	r20, 0x01	; 1
+  82:	69 2f       	mov	r22, r25
+  84:	0e 94 b4 00 	call	0x168	; 0x168 <DIO_init>
+  88:	81 11       	cpse	r24, r1
+		return LED_INIT_OK;
+	return LED_INIT_FAILED;
+  8a:	81 e0       	ldi	r24, 0x01	; 1
+}
+  8c:	08 95       	ret
+
+0000008e <LED_on>:
+EN_LED_STATUS LED_on(uint8_t ledPort, uint8_t ledPin)
+{
+  8e:	98 2f       	mov	r25, r24
+  90:	86 2f       	mov	r24, r22
+	if(DIO_write(ledPin, ledPort, HIGH) == DIO_WRITE_OK)
+  92:	41 e0       	ldi	r20, 0x01	; 1
+  94:	69 2f       	mov	r22, r25
+  96:	0e 94 e2 00 	call	0x1c4	; 0x1c4 <DIO_write>
+  9a:	82 30       	cpi	r24, 0x02	; 2
+  9c:	09 f0       	breq	.+2      	; 0xa0 <LED_on+0x12>
+		return LED_ON_OK;
+	return LED_ON_FAILED;
+  9e:	83 e0       	ldi	r24, 0x03	; 3
+}
+  a0:	08 95       	ret
+
+000000a2 <LED_off>:
+EN_LED_STATUS LED_off(uint8_t ledPort, uint8_t ledPin)
+{
+  a2:	98 2f       	mov	r25, r24
+  a4:	86 2f       	mov	r24, r22
+	if(DIO_write(ledPin, ledPort, LOW) == DIO_WRITE_OK)
+  a6:	40 e0       	ldi	r20, 0x00	; 0
+  a8:	69 2f       	mov	r22, r25
+  aa:	0e 94 e2 00 	call	0x1c4	; 0x1c4 <DIO_write>
+  ae:	82 30       	cpi	r24, 0x02	; 2
+  b0:	11 f4       	brne	.+4      	; 0xb6 <LED_off+0x14>
+		return LED_OFF_OK;
+  b2:	84 e0       	ldi	r24, 0x04	; 4
+  b4:	08 95       	ret
+	return LED_OFF_FAILED;
+  b6:	85 e0       	ldi	r24, 0x05	; 5
+  b8:	08 95       	ret
+
+000000ba <main>:
+EN_DIO_STATUS status;
 int main(void)
 {
-  6c:	ff cf       	rjmp	.-2      	; 0x6c <main>
+	//APP_init();
+	
+	status = LED_init(PORT_A, 0);
+  ba:	60 e0       	ldi	r22, 0x00	; 0
+  bc:	81 e4       	ldi	r24, 0x41	; 65
+  be:	0e 94 3e 00 	call	0x7c	; 0x7c <LED_init>
+  c2:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
+	status = LED_on(PORT_A, 0);
+  c6:	60 e0       	ldi	r22, 0x00	; 0
+  c8:	81 e4       	ldi	r24, 0x41	; 65
+  ca:	0e 94 47 00 	call	0x8e	; 0x8e <LED_on>
+  ce:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
+	status = LED_off(PORT_A, 0);
+  d2:	60 e0       	ldi	r22, 0x00	; 0
+  d4:	81 e4       	ldi	r24, 0x41	; 65
+  d6:	0e 94 51 00 	call	0xa2	; 0xa2 <LED_off>
+  da:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
+	
+	//while (1) 
+    //{
+		//APP_start();
+    //}
+}
+  de:	80 e0       	ldi	r24, 0x00	; 0
+  e0:	90 e0       	ldi	r25, 0x00	; 0
+  e2:	08 95       	ret
 
-0000006e <_exit>:
-  6e:	f8 94       	cli
+000000e4 <checkDir>:
 
-00000070 <__stop_program>:
-  70:	ff cf       	rjmp	.-2      	; 0x70 <__stop_program>
+#include "dio.h"
+
+EN_DIO_STATUS checkDir(uint8_t *pinRegister, uint8_t direction, uint8_t pinNumber)
+{
+	if(direction == INPUT){
+  e4:	61 11       	cpse	r22, r1
+  e6:	0e c0       	rjmp	.+28     	; 0x104 <checkDir+0x20>
+		CLEAR_BIT(*pinRegister, pinNumber);	//SET PIN NUMBER AS INPUT
+  e8:	21 e0       	ldi	r18, 0x01	; 1
+  ea:	30 e0       	ldi	r19, 0x00	; 0
+  ec:	02 c0       	rjmp	.+4      	; 0xf2 <checkDir+0xe>
+  ee:	22 0f       	add	r18, r18
+  f0:	33 1f       	adc	r19, r19
+  f2:	4a 95       	dec	r20
+  f4:	e2 f7       	brpl	.-8      	; 0xee <checkDir+0xa>
+  f6:	20 95       	com	r18
+  f8:	fc 01       	movw	r30, r24
+  fa:	30 81       	ld	r19, Z
+  fc:	23 23       	and	r18, r19
+  fe:	20 83       	st	Z, r18
+		SET_BIT(*pinRegister, pinNumber);	//SET PIN NUMBER AS OUTPUT
+	}
+	else
+		return DIO_WRONG_PORT_DIRECTION;
+	
+	return DIO_RIGHT_PORT_DIRECTION;
+ 100:	88 e0       	ldi	r24, 0x08	; 8
+ 102:	08 95       	ret
+EN_DIO_STATUS checkDir(uint8_t *pinRegister, uint8_t direction, uint8_t pinNumber)
+{
+	if(direction == INPUT){
+		CLEAR_BIT(*pinRegister, pinNumber);	//SET PIN NUMBER AS INPUT
+	}
+	else if(direction == OUTPUT){		
+ 104:	61 30       	cpi	r22, 0x01	; 1
+ 106:	69 f4       	brne	.+26     	; 0x122 <checkDir+0x3e>
+		SET_BIT(*pinRegister, pinNumber);	//SET PIN NUMBER AS OUTPUT
+ 108:	21 e0       	ldi	r18, 0x01	; 1
+ 10a:	30 e0       	ldi	r19, 0x00	; 0
+ 10c:	02 c0       	rjmp	.+4      	; 0x112 <checkDir+0x2e>
+ 10e:	22 0f       	add	r18, r18
+ 110:	33 1f       	adc	r19, r19
+ 112:	4a 95       	dec	r20
+ 114:	e2 f7       	brpl	.-8      	; 0x10e <checkDir+0x2a>
+ 116:	fc 01       	movw	r30, r24
+ 118:	30 81       	ld	r19, Z
+ 11a:	23 2b       	or	r18, r19
+ 11c:	20 83       	st	Z, r18
+	}
+	else
+		return DIO_WRONG_PORT_DIRECTION;
+	
+	return DIO_RIGHT_PORT_DIRECTION;
+ 11e:	88 e0       	ldi	r24, 0x08	; 8
+ 120:	08 95       	ret
+	}
+	else if(direction == OUTPUT){		
+		SET_BIT(*pinRegister, pinNumber);	//SET PIN NUMBER AS OUTPUT
+	}
+	else
+		return DIO_WRONG_PORT_DIRECTION;
+ 122:	89 e0       	ldi	r24, 0x09	; 9
+	
+	return DIO_RIGHT_PORT_DIRECTION;
+		
+}
+ 124:	08 95       	ret
+
+00000126 <checkValue>:
+
+EN_DIO_STATUS checkValue(uint8_t *pinRegister, uint8_t value, uint8_t pinNumber)
+{
+	if(value == LOW)
+ 126:	61 11       	cpse	r22, r1
+ 128:	0e c0       	rjmp	.+28     	; 0x146 <checkValue+0x20>
+		CLEAR_BIT(*pinRegister, pinNumber);	//SET PIN NUMBER AS INPUT
+ 12a:	21 e0       	ldi	r18, 0x01	; 1
+ 12c:	30 e0       	ldi	r19, 0x00	; 0
+ 12e:	02 c0       	rjmp	.+4      	; 0x134 <checkValue+0xe>
+ 130:	22 0f       	add	r18, r18
+ 132:	33 1f       	adc	r19, r19
+ 134:	4a 95       	dec	r20
+ 136:	e2 f7       	brpl	.-8      	; 0x130 <checkValue+0xa>
+ 138:	20 95       	com	r18
+ 13a:	fc 01       	movw	r30, r24
+ 13c:	30 81       	ld	r19, Z
+ 13e:	23 23       	and	r18, r19
+ 140:	20 83       	st	Z, r18
+	else if(value == HIGH)
+		SET_BIT(*pinRegister, pinNumber);	//SET PIN NUMBER AS OUTPUT
+	else
+		return DIO_WRONG_WRITE_VALUE;
+	
+	return DIO_RIGHT_WRITE_VALUE;
+ 142:	8a e0       	ldi	r24, 0x0A	; 10
+ 144:	08 95       	ret
+
+EN_DIO_STATUS checkValue(uint8_t *pinRegister, uint8_t value, uint8_t pinNumber)
+{
+	if(value == LOW)
+		CLEAR_BIT(*pinRegister, pinNumber);	//SET PIN NUMBER AS INPUT
+	else if(value == HIGH)
+ 146:	61 30       	cpi	r22, 0x01	; 1
+ 148:	69 f4       	brne	.+26     	; 0x164 <checkValue+0x3e>
+		SET_BIT(*pinRegister, pinNumber);	//SET PIN NUMBER AS OUTPUT
+ 14a:	21 e0       	ldi	r18, 0x01	; 1
+ 14c:	30 e0       	ldi	r19, 0x00	; 0
+ 14e:	02 c0       	rjmp	.+4      	; 0x154 <checkValue+0x2e>
+ 150:	22 0f       	add	r18, r18
+ 152:	33 1f       	adc	r19, r19
+ 154:	4a 95       	dec	r20
+ 156:	e2 f7       	brpl	.-8      	; 0x150 <checkValue+0x2a>
+ 158:	fc 01       	movw	r30, r24
+ 15a:	30 81       	ld	r19, Z
+ 15c:	23 2b       	or	r18, r19
+ 15e:	20 83       	st	Z, r18
+	else
+		return DIO_WRONG_WRITE_VALUE;
+	
+	return DIO_RIGHT_WRITE_VALUE;
+ 160:	8a e0       	ldi	r24, 0x0A	; 10
+ 162:	08 95       	ret
+	if(value == LOW)
+		CLEAR_BIT(*pinRegister, pinNumber);	//SET PIN NUMBER AS INPUT
+	else if(value == HIGH)
+		SET_BIT(*pinRegister, pinNumber);	//SET PIN NUMBER AS OUTPUT
+	else
+		return DIO_WRONG_WRITE_VALUE;
+ 164:	8b e0       	ldi	r24, 0x0B	; 11
+	
+	return DIO_RIGHT_WRITE_VALUE;
+	
+}
+ 166:	08 95       	ret
+
+00000168 <DIO_init>:
+
+EN_DIO_STATUS DIO_init(uint8_t pinNumber, uint8_t portNumber, uint8_t direction)
+{
+	EN_DIO_STATUS dirStatus = DIO_INIT_FAILED;
+	
+	if (pinNumber > 7)
+ 168:	88 30       	cpi	r24, 0x08	; 8
+ 16a:	40 f5       	brcc	.+80     	; 0x1bc <DIO_init+0x54>
+ 16c:	24 2f       	mov	r18, r20
+ 16e:	48 2f       	mov	r20, r24
+		return DIO_WRONG_PIN_NUMBER;
+	
+	switch (portNumber)
+ 170:	62 34       	cpi	r22, 0x42	; 66
+ 172:	79 f0       	breq	.+30     	; 0x192 <DIO_init+0x2a>
+ 174:	18 f4       	brcc	.+6      	; 0x17c <DIO_init+0x14>
+ 176:	61 34       	cpi	r22, 0x41	; 65
+ 178:	31 f0       	breq	.+12     	; 0x186 <DIO_init+0x1e>
+ 17a:	22 c0       	rjmp	.+68     	; 0x1c0 <DIO_init+0x58>
+ 17c:	63 34       	cpi	r22, 0x43	; 67
+ 17e:	79 f0       	breq	.+30     	; 0x19e <DIO_init+0x36>
+ 180:	64 34       	cpi	r22, 0x44	; 68
+ 182:	99 f0       	breq	.+38     	; 0x1aa <DIO_init+0x42>
+ 184:	1d c0       	rjmp	.+58     	; 0x1c0 <DIO_init+0x58>
+	{
+		case PORT_A:
+			dirStatus = checkDir(&DDRA, direction, pinNumber);
+ 186:	62 2f       	mov	r22, r18
+ 188:	8a e3       	ldi	r24, 0x3A	; 58
+ 18a:	90 e0       	ldi	r25, 0x00	; 0
+ 18c:	0e 94 72 00 	call	0xe4	; 0xe4 <checkDir>
+		break;
+ 190:	11 c0       	rjmp	.+34     	; 0x1b4 <DIO_init+0x4c>
+		
+		case PORT_B:
+			dirStatus = checkDir(&DDRB, direction, pinNumber);
+ 192:	62 2f       	mov	r22, r18
+ 194:	87 e3       	ldi	r24, 0x37	; 55
+ 196:	90 e0       	ldi	r25, 0x00	; 0
+ 198:	0e 94 72 00 	call	0xe4	; 0xe4 <checkDir>
+		break;
+ 19c:	0b c0       	rjmp	.+22     	; 0x1b4 <DIO_init+0x4c>
+		
+		case PORT_C:
+			dirStatus = checkDir(&DDRC, direction, pinNumber);
+ 19e:	62 2f       	mov	r22, r18
+ 1a0:	84 e3       	ldi	r24, 0x34	; 52
+ 1a2:	90 e0       	ldi	r25, 0x00	; 0
+ 1a4:	0e 94 72 00 	call	0xe4	; 0xe4 <checkDir>
+		break;
+ 1a8:	05 c0       	rjmp	.+10     	; 0x1b4 <DIO_init+0x4c>
+		
+		case PORT_D:
+			dirStatus = checkDir(&DDRD, direction, pinNumber);
+ 1aa:	62 2f       	mov	r22, r18
+ 1ac:	81 e3       	ldi	r24, 0x31	; 49
+ 1ae:	90 e0       	ldi	r25, 0x00	; 0
+ 1b0:	0e 94 72 00 	call	0xe4	; 0xe4 <checkDir>
+		default:
+			return DIO_WRONG_PORT_NUMBER;
+		break;
+	}
+	
+	if(dirStatus == DIO_WRONG_PORT_DIRECTION)
+ 1b4:	89 30       	cpi	r24, 0x09	; 9
+ 1b6:	29 f0       	breq	.+10     	; 0x1c2 <DIO_init+0x5a>
+		return dirStatus;
+	
+	return DIO_INIT_OK;
+ 1b8:	80 e0       	ldi	r24, 0x00	; 0
+ 1ba:	08 95       	ret
+EN_DIO_STATUS DIO_init(uint8_t pinNumber, uint8_t portNumber, uint8_t direction)
+{
+	EN_DIO_STATUS dirStatus = DIO_INIT_FAILED;
+	
+	if (pinNumber > 7)
+		return DIO_WRONG_PIN_NUMBER;
+ 1bc:	8e e0       	ldi	r24, 0x0E	; 14
+ 1be:	08 95       	ret
+		case PORT_D:
+			dirStatus = checkDir(&DDRD, direction, pinNumber);
+		break;
+		
+		default:
+			return DIO_WRONG_PORT_NUMBER;
+ 1c0:	87 e0       	ldi	r24, 0x07	; 7
+	
+	if(dirStatus == DIO_WRONG_PORT_DIRECTION)
+		return dirStatus;
+	
+	return DIO_INIT_OK;
+}
+ 1c2:	08 95       	ret
+
+000001c4 <DIO_write>:
+
+EN_DIO_STATUS DIO_write(uint8_t pinNumber, uint8_t portNumber, uint8_t value)
+{
+	if (pinNumber > 7)
+ 1c4:	88 30       	cpi	r24, 0x08	; 8
+ 1c6:	40 f5       	brcc	.+80     	; 0x218 <DIO_write+0x54>
+ 1c8:	24 2f       	mov	r18, r20
+ 1ca:	48 2f       	mov	r20, r24
+		return DIO_WRONG_PIN_NUMBER;
+		
+	EN_DIO_STATUS valueStatus;
+	
+	switch (portNumber)
+ 1cc:	62 34       	cpi	r22, 0x42	; 66
+ 1ce:	79 f0       	breq	.+30     	; 0x1ee <DIO_write+0x2a>
+ 1d0:	18 f4       	brcc	.+6      	; 0x1d8 <DIO_write+0x14>
+ 1d2:	61 34       	cpi	r22, 0x41	; 65
+ 1d4:	31 f0       	breq	.+12     	; 0x1e2 <DIO_write+0x1e>
+ 1d6:	22 c0       	rjmp	.+68     	; 0x21c <DIO_write+0x58>
+ 1d8:	63 34       	cpi	r22, 0x43	; 67
+ 1da:	79 f0       	breq	.+30     	; 0x1fa <DIO_write+0x36>
+ 1dc:	64 34       	cpi	r22, 0x44	; 68
+ 1de:	99 f0       	breq	.+38     	; 0x206 <DIO_write+0x42>
+ 1e0:	1d c0       	rjmp	.+58     	; 0x21c <DIO_write+0x58>
+	{
+		case PORT_A:
+			valueStatus = checkValue(&PORTA, value, pinNumber);
+ 1e2:	62 2f       	mov	r22, r18
+ 1e4:	8b e3       	ldi	r24, 0x3B	; 59
+ 1e6:	90 e0       	ldi	r25, 0x00	; 0
+ 1e8:	0e 94 93 00 	call	0x126	; 0x126 <checkValue>
+		break;
+ 1ec:	11 c0       	rjmp	.+34     	; 0x210 <DIO_write+0x4c>
+		
+		case PORT_B:
+			valueStatus = checkValue(&PORTA, value, pinNumber);
+ 1ee:	62 2f       	mov	r22, r18
+ 1f0:	8b e3       	ldi	r24, 0x3B	; 59
+ 1f2:	90 e0       	ldi	r25, 0x00	; 0
+ 1f4:	0e 94 93 00 	call	0x126	; 0x126 <checkValue>
+		break;
+ 1f8:	0b c0       	rjmp	.+22     	; 0x210 <DIO_write+0x4c>
+		
+		case PORT_C:
+			valueStatus = checkValue(&PORTA, value, pinNumber);
+ 1fa:	62 2f       	mov	r22, r18
+ 1fc:	8b e3       	ldi	r24, 0x3B	; 59
+ 1fe:	90 e0       	ldi	r25, 0x00	; 0
+ 200:	0e 94 93 00 	call	0x126	; 0x126 <checkValue>
+		break;
+ 204:	05 c0       	rjmp	.+10     	; 0x210 <DIO_write+0x4c>
+		
+		case PORT_D:
+			valueStatus = checkValue(&PORTA, value, pinNumber);
+ 206:	62 2f       	mov	r22, r18
+ 208:	8b e3       	ldi	r24, 0x3B	; 59
+ 20a:	90 e0       	ldi	r25, 0x00	; 0
+ 20c:	0e 94 93 00 	call	0x126	; 0x126 <checkValue>
+		default:
+			return DIO_WRONG_PORT_NUMBER;
+		break;
+	}
+	
+	if(valueStatus == DIO_WRONG_WRITE_VALUE)
+ 210:	8b 30       	cpi	r24, 0x0B	; 11
+ 212:	29 f0       	breq	.+10     	; 0x21e <DIO_write+0x5a>
+		return valueStatus;
+	
+	return DIO_WRITE_OK;
+ 214:	82 e0       	ldi	r24, 0x02	; 2
+ 216:	08 95       	ret
+}
+
+EN_DIO_STATUS DIO_write(uint8_t pinNumber, uint8_t portNumber, uint8_t value)
+{
+	if (pinNumber > 7)
+		return DIO_WRONG_PIN_NUMBER;
+ 218:	8e e0       	ldi	r24, 0x0E	; 14
+ 21a:	08 95       	ret
+		case PORT_D:
+			valueStatus = checkValue(&PORTA, value, pinNumber);
+		break;
+		
+		default:
+			return DIO_WRONG_PORT_NUMBER;
+ 21c:	87 e0       	ldi	r24, 0x07	; 7
+	
+	if(valueStatus == DIO_WRONG_WRITE_VALUE)
+		return valueStatus;
+	
+	return DIO_WRITE_OK;
+}
+ 21e:	08 95       	ret
+
+00000220 <_exit>:
+ 220:	f8 94       	cli
+
+00000222 <__stop_program>:
+ 222:	ff cf       	rjmp	.-2      	; 0x222 <__stop_program>

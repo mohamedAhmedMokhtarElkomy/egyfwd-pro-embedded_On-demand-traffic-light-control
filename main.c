@@ -5,14 +5,21 @@
  * Author : admin
  */ 
 
-#include <avr/io.h>
+#include "Application/application.h"
 
-
+EN_DIO_STATUS status;
 int main(void)
 {
-    /* Replace with your application code */
-    while (1) 
-    {
-    }
+	//APP_init();
+	
+	status = LED_init(PORT_A, 0);
+	status = LED_on(PORT_A, 0);
+	status = LED_off(PORT_A, 0);
+	
+	
+	//while (1) 
+    //{
+		//APP_start();
+    //}
 }
 
