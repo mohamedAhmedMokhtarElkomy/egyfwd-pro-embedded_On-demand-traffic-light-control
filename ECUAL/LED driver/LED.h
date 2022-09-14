@@ -32,6 +32,7 @@ EN_LED_STATUS LED_init(uint8_t ledPort, uint8_t ledPin);
 EN_LED_STATUS LED_on(uint8_t ledPort, uint8_t ledPin);
 EN_LED_STATUS LED_off(uint8_t ledPort, uint8_t ledPin);
 
+void LED_toggle(uint8_t ledPort, uint8_t ledPin);
 
 
 

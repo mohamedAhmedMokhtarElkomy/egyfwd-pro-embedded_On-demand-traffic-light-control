@@ -39,6 +39,8 @@ SUBDIRS :=  \
 ../ECUAL \
 ../Application \
 ../MCAL/DIO \
+../MCAL/Interrupt \
+../MCAL/TIMER \
 ../Utilities
 
 
@@ -48,7 +50,8 @@ C_SRCS +=  \
 ../ECUAL/BUTTON\ driver/button.c \
 ../ECUAL/LED\ driver/LED.c \
 ../main.c \
-../MCAL/DIO/dio.c
+../MCAL/DIO/dio.c \
+../MCAL/TIMER/timer.c
 
 
 PREPROCESSING_SRCS += 
@@ -62,28 +65,32 @@ Application/application.o \
 ECUAL/BUTTON\ driver/button.o \
 ECUAL/LED\ driver/LED.o \
 main.o \
-MCAL/DIO/dio.o
+MCAL/DIO/dio.o \
+MCAL/TIMER/timer.o
 
 OBJS_AS_ARGS +=  \
 Application/application.o \
 "ECUAL/BUTTON driver/button.o" \
 "ECUAL/LED driver/LED.o" \
 main.o \
-MCAL/DIO/dio.o
+MCAL/DIO/dio.o \
+MCAL/TIMER/timer.o
 
 C_DEPS +=  \
 Application/application.d \
 ECUAL/BUTTON\ driver/button.d \
 ECUAL/LED\ driver/LED.d \
 main.d \
-MCAL/DIO/dio.d
+MCAL/DIO/dio.d \
+MCAL/TIMER/timer.d
 
 C_DEPS_AS_ARGS +=  \
 Application/application.d \
 "ECUAL/BUTTON driver/button.d" \
 "ECUAL/LED driver/LED.d" \
 main.d \
-MCAL/DIO/dio.d
+MCAL/DIO/dio.d \
+MCAL/TIMER/timer.d
 
 OUTPUT_FILE_PATH +=On-demand-traffic-light-control.elf
 
@@ -128,6 +135,13 @@ ECUAL/LED\ driver/LED.o: ../ECUAL/LED\ driver/LED.c
 	
 
 MCAL/DIO/dio.o: ../MCAL/DIO/dio.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32a" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+MCAL/TIMER/timer.o: ../MCAL/TIMER/timer.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32a" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

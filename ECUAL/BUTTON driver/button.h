@@ -9,11 +9,11 @@
 #ifndef BUTTON_H_
 #define BUTTON_H_
 
-#include "../../MCAL/DIO/dio.h"	//Upper layer include lower layer
+#include "../../MCAL/DIO/dio.h"				//Upper layer include lower layer
+#include "../../MCAL/Interrupt/interrupt.h"	//Upper layer include lower layer
 
-
-#define BUTTON_PEDESTRIAN_PORT PORT_C
-#define BUTTON_PEDESTRIAN_PIN 0
+#define BUTTON_PEDESTRIAN_PORT PORT_D
+#define BUTTON_PEDESTRIAN_PIN 2
 
 typedef enum EN_BUTTON_STATUS
 {

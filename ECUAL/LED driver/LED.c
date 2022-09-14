@@ -25,3 +25,8 @@ EN_LED_STATUS LED_off(uint8_t ledPort, uint8_t ledPin)
 		return LED_OFF_OK;
 	return LED_OFF_FAILED;
 }
+
+void LED_toggle(uint8_t ledPort, uint8_t ledPin)
+{
+	ledPort ^= (1<<ledPin);
+}

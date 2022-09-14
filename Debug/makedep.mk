@@ -12,3 +12,5 @@ main.c
 
 MCAL\DIO\dio.c
 
+MCAL\TIMER\timer.c
+

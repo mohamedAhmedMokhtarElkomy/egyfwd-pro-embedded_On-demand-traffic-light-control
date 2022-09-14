@@ -43,6 +43,15 @@
 #define TCCR0 *((volatile uint8_t*) 0x53)	//8-bit register
 #define TCNT0 *((volatile uint8_t*) 0x52)	//8-bit register
 
+/************************************************************************/
+/* External Interrupt registers                                                                     */
+/************************************************************************/
+
+#define MCUCR *((volatile uint8_t*)0x55) //8-bit register
+#define MCUCSR *((volatile uint8_t*)0x54) //8-bit register
+#define GICR *((volatile uint8_t*)0x5B) //8-bit register
+#define GIFR *((volatile uint8_t*)0x5A) //8-bit register
+
 
 
 #endif /* REGISTERS_H_ */
