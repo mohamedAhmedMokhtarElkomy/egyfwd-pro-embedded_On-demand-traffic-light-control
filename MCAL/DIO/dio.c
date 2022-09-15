@@ -86,15 +86,15 @@ EN_DIO_STATUS DIO_write(uint8_t pinNumber, uint8_t portNumber, uint8_t value)
 		break;
 		
 		case PORT_B:
-			valueStatus = checkValue(&PORTA, value, pinNumber);
+			valueStatus = checkValue(&PORTB, value, pinNumber);
 		break;
 		
 		case PORT_C:
-			valueStatus = checkValue(&PORTA, value, pinNumber);
+			valueStatus = checkValue(&PORTC, value, pinNumber);
 		break;
 		
 		case PORT_D:
-			valueStatus = checkValue(&PORTA, value, pinNumber);
+			valueStatus = checkValue(&PORTD, value, pinNumber);
 		break;
 		
 		default:

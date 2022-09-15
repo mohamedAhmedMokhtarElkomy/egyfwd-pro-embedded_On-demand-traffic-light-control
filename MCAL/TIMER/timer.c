@@ -20,6 +20,7 @@ void TIMER0_start()
 {
 	//Timer start by setting prescaler -> timer start one prescaler is set to 1
 	TCCR0 |= (1<<0); //No prescaler
+	//TCCR0 |= (1<<2); //No prescaler
 }
 void TIMER0_wait()
 {

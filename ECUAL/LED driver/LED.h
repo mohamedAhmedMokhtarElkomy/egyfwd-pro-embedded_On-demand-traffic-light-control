@@ -12,9 +12,15 @@
 #include "../../MCAL/DIO/dio.h"	//Upper layer include lower layer
 
 #define LEDS_PORT PORT_A
-#define LED_TRAFFIC_RED_PIN		0
+#define LED_TRAFFIC_RED_PIN		2
 #define LED_TRAFFIC_YELLOW_PIN	1
-#define LED_TRAFFIC_GREEN_PIN	2
+#define LED_TRAFFIC_GREEN_PIN	0
+
+#define LEDS_PEDESTRIAN_PORT PORT_B
+#define LED_PEDESTRIAN_RED_PIN		2
+#define LED_PEDESTRIAN_YELLOW_PIN	1
+#define LED_PEDESTRIAN_GREEN_PIN	0
+
 
 
 typedef enum EN_LED_STATUS
